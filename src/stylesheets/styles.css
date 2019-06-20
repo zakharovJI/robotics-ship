@@ -1,0 +1,144 @@
+@import url(fonts.css);
+.App {
+  display: grid;
+  width: 100vw;
+  justify-content: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #f0f0f0; }
+
+.App-content {
+  display: grid;
+  width: 1200px;
+  padding-bottom: 70px;
+  justify-content: center;
+  background-color: white; }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 890px;
+  height: 250px;
+  background-color: #fff;
+  margin-bottom: 600px; }
+
+.info-wrapper {
+  width: 640px;
+  height: 180px;
+  background-color: #f8f8f8;
+  margin: 70px 0 0 0;
+  padding-right: 10px;
+  letter-spacing: -0.7px;
+  font-family: "Myriad Pro", serif; }
+
+.info-wrapper__title {
+  color: #dc594a;
+  font-weight: 300;
+  margin-left: 30px; }
+
+.content_paragraph {
+  color: #767676;
+  margin-left: 30px;
+  font-size: 14px;
+  line-height: 25px;
+  overflow-y: auto; }
+
+.years-wrapper {
+  width: 180px;
+  height: 180px;
+  background-color: #fff;
+  margin: 70px 0 0 160px; }
+
+.year-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  background-color: #f8f8f8;
+  font-family: "Myriad Pro", serif; }
+
+.year-item {
+  position: relative;
+  margin: 3px 0 0 5px;
+  font-size: 12px;
+  color: #767676; }
+
+.arrow-svg {
+  margin-left: 108px;
+  margin-top: 2px;
+  stroke: #49a2c7;
+  transition: all 1s linear; }
+
+.years-wrapper-content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  max-height: 0px;
+  overflow-y: auto;
+  height: 150px;
+  width: 100%;
+  transition: 0.5s cubic-bezier(0.2, 0.89, 0.4, 0.88);
+  background-color: #efefef;
+  font-family: "Myriad Pro", serif; }
+
+.vis {
+  max-height: 250px; }
+
+.years-wrapper-content__item {
+  padding: 5px 0 5px 0;
+  width: 100%; }
+  .years-wrapper-content__item:hover {
+    background-color: #fa9f9a; }
+
+.footer {
+  width: 890px;
+  height: 230px;
+  align-self: flex-end;
+  border: 1px solid #ddedf4;
+  margin-bottom: -150px;
+  font-family: "Myriad Pro", serif; }
+
+.footer__title {
+  margin-left: 30px;
+  font-weight: 300;
+  color: #000; }
+
+.footer__date {
+  margin-left: 30px;
+  color: #49a2c7; }
+
+.footer__content {
+  height: 90px;
+  padding-right: 30px; }
+
+.svg-area {
+  position: absolute;
+  top: 370px;
+  width: 1200px;
+  font-family: "Myriad Pro", serif;
+  font-size: 20px; }
+
+.year-point {
+  z-index: 2000; }
+
+.path {
+  z-index: 2; }
+
+.svg-text {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.arrow-icon {
+  height: 10px;
+  width: 10px;
+  display: block;
+  margin: 1em auto;
+  position: relative;
+  cursor: pointer;
+  border-radius: 4px; }
+
+/*# sourceMappingURL=styles.css.map */

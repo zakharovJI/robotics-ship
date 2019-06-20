@@ -1,0 +1,12 @@
+<svg width="60px" height="40px" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <g>
+    <polyline points="0,14 24,20 21,23.9" fill="#3da086" />
+    <polyline points="0,14 13,37 30,28" fill="#4fd0ad" />
+    <polyline points="13,37 50,37 30,28" fill="#3da086" />
+    <polyline points="30,28 50,37 60,14" fill="#4fd0ad" />
+    <polyline points="60,14 36,20 39,23.8" fill="#3da086"/>
+    <polyline points="39,23.8 30,28 21,23.9 30,8" fill="#78e5c7"/>
+    <polyline points="30,12 30,28 32,27" fill="#4aceaa"/>
+    <polyline points="30,1 30,8, 21, 4" fill="#dd4643"/>
+  </g>
+</svg>
