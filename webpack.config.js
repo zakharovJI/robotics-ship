@@ -52,7 +52,7 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin(
             {
-                filename: 'styleasfdasd.css',
+                filename: 'styles.css',
                 allChunks: true
             }
         ),
