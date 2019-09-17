@@ -213,6 +213,9 @@ function scripts() {
 
 
         function onYearClicked(prev, next, i) {
+
+            console.log(`200${i + 1} clicked`);
+
             $year__title.textContent = document.getElementsByClassName('year-item-expending')[next].textContent;
             document.getElementsByClassName('years-wrapper-content')[0].className = 'years-wrapper-content year-wrapper';
 
@@ -234,39 +237,45 @@ function scripts() {
             if (Math.abs(tempItemForColor - i) !== 1) {
                 if (tempItemForColor > i) {
                     if (animationStack.length <= 1) {
-                        let temp = tempItemForColor;
+                        let temp = tempItemForColor + 1;
+                        console.log('KJADKFJADF')
                         while (temp > i) {
                             animationStack.push(temp);
                             temp -= 1;
                         }
+                        temp_item += 1;
                     } else {
                         if (Math.abs(tempItemForColor - i) !== 1) {
+                            console.log('first')
                             let temp = tempItemForColor;
                             while (temp >= i) {
                                 animationStack.push(temp);
                                 temp -= 1;
                             }
                         } else {
-                            animationStack.push(i + 1);
+                            animationStack.push(i);
                         }
                     }
                     animationEnd()
                 } else if (tempItemForColor < i) {
                     if (animationStack.length <= 1) {
-                        let temp = tempItemForColor + 1;
+                        let temp = tempItemForColor;
                         while (temp <= i) {
                             animationStack.push(temp);
                             temp += 1;
                         }
+                        temp_item -= 1;
+                        console.log(temp_item)
                     } else {
                         if (Math.abs(tempItemForColor - i) !== 1) {
-                            let temp = tempItemForColor + 1;
+                            console.log('second')
+                            let temp = tempItemForColor;
                             while (temp <= i) {
                                 animationStack.push(temp);
                                 temp += 1;
                             }
                         } else {
-                            animationStack.push(i + 1);
+                            animationStack.push(i);
                         }
                     }
                     // console.log('stack', animationStack)
@@ -363,7 +372,7 @@ function scripts() {
                 }
             }
 
-            console.log('MOVE: ', lastPath, pathNum, tempItemForCoord, 'xDIF', xDif, 'yDIF', yDif);
+            console.log('MOVE: ', lastPath, pathNum, tempItemForCoord, 'xDIF', xDif, 'yDIF', yDif, 'with stack = ', animationStack);
 
 
             let g = Snap("#svg-area");
@@ -388,7 +397,7 @@ function scripts() {
                             'r' + (pos.alpha - 180)
                     });
                 }, moveTime, mina.linear);
-            } else if (lastPath > pathNum) {
+            } else if (lastPath >= pathNum) {
                 Snap.animate(lenPath, 0, function (val) {
                     let pos = invisiblePath.getPointAtLength(val);
 
@@ -416,7 +425,6 @@ function scripts() {
         }
 
         const animationEnd = () => {
-            let g = Snap("#svg-area");
             if (animationStack.length > 0) {
                 moveShip(temp_item, animationStack.splice(0, 1));
             }
